@@ -64,5 +64,16 @@ export const placeholderIcons = {
         <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
       </circle>
     </svg>
+  ),
+  
+  // Sparkles for generating state
+  sparklesIcon: (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M9.5 12L12 9.5 14.5 12 12 14.5z"/>
+      <path d="M6.5 6.5L9 4 11.5 6.5 9 9z"/>
+      <path d="M14.5 6.5L17 4 19.5 6.5 17 9z"/>
+      <path d="M6.5 17.5L9 15 11.5 17.5 9 20z"/>
+      <path d="M14.5 17.5L17 15 19.5 17.5 17 20z"/>
+    </svg>
   )
 };
