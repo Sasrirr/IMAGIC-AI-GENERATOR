@@ -22,8 +22,10 @@ const generateMockImage = (prompt) => {
   return new Promise((resolve) => {
     const delay = 2000 + Math.random() * 2000;
     setTimeout(() => {
-      const mockImage = generateMockResponse(prompt);
-      resolve(mockImage);
+      const mockDataUrl = generateMockResponse(prompt);
+      // Extract just the base64 part to match OpenAI response format
+      const base64Part = mockDataUrl.split(',')[1]; // Remove "data:image/svg+xml;base64," prefix
+      resolve(base64Part);
     }, delay);
   });
 };
