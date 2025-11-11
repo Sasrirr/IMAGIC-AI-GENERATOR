@@ -48,7 +48,11 @@ const CreatePost = () => {
           post={post}
           setPost={setPost}
         />
-        <GeneratedImageCard loading={generateImageLoading} src={post.photo} />
+        <GeneratedImageCard
+          loading={generateImageLoading}
+          src={post.photo}
+          prompt={post.prompt}
+        />
       </Wrapper>
     </Container>
   );

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import SearchBar from "../components/SearchBar";
 import ImageCard from "../components/cards/ImageCard";
+import EmptyGalleryState from "../components/EmptyGalleryState";
 import { GetPosts } from "../api";
 import { CircularProgress } from "@mui/material";
 
@@ -128,7 +129,10 @@ const Home = () => {
                   ))}
               </>
             ) : (
-              <>No Posts Found !!</>
+              <EmptyGalleryState
+                isSearch={search.length > 0}
+                searchTerm={search}
+              />
             )}
           </CardWrapper>
         )}

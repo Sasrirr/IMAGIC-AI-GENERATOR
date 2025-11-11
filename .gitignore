@@ -14,6 +14,7 @@
 
 # production
 /build
+/client/build
 
 # misc
 .DS_Store
@@ -25,3 +26,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Irrelevant documentation files
+CARBON_FOOTPRINT_ARCHITECTURE.md
+INTERVIEW_GUIDE.md
+MOCK_SETUP_GUIDE.md
+SWITCHING_GUIDE.md
