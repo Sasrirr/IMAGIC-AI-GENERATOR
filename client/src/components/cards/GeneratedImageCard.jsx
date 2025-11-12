@@ -56,7 +56,7 @@ const PlaceholderPreview = styled.img`
 const GeneratedImageCard = ({ src, loading, prompt = "" }) => {
   // Generate placeholder based on current prompt
   const placeholderSrc = placeholderImages.generatePlaceholder(prompt);
-  
+
   // Debug logging
   console.log("GeneratedImageCard props:", { src, loading, prompt, placeholderSrc });
 

@@ -5,7 +5,7 @@ export const placeholderImages = {
   // Generate placeholder for different prompt types
   generatePlaceholder: (prompt = "") => {
     const lowerPrompt = prompt.toLowerCase();
-    
+
     if (lowerPrompt.includes('sunset') || lowerPrompt.includes('mountain') || lowerPrompt.includes('landscape')) {
       return placeholderImages.sunset;
     } else if (lowerPrompt.includes('abstract') || lowerPrompt.includes('art') || lowerPrompt.includes('painting')) {
@@ -45,35 +45,35 @@ export const placeholderIcons = {
   // Image icon for empty gallery
   imageIcon: (
     <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+      <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
     </svg>
   ),
-  
+
   // Search icon for no results
   searchIcon: (
     <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+      <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
     </svg>
   ),
-  
+
   // Loading spinner
   spinnerIcon: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
       <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" strokeDasharray="31.416" strokeDashoffset="31.416">
-        <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite"/>
-        <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite"/>
+        <animate attributeName="stroke-dasharray" dur="2s" values="0 31.416;15.708 15.708;0 31.416" repeatCount="indefinite" />
+        <animate attributeName="stroke-dashoffset" dur="2s" values="0;-15.708;-31.416" repeatCount="indefinite" />
       </circle>
     </svg>
   ),
-  
+
   // Sparkles for generating state
   sparklesIcon: (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M9.5 12L12 9.5 14.5 12 12 14.5z"/>
-      <path d="M6.5 6.5L9 4 11.5 6.5 9 9z"/>
-      <path d="M14.5 6.5L17 4 19.5 6.5 17 9z"/>
-      <path d="M6.5 17.5L9 15 11.5 17.5 9 20z"/>
-      <path d="M14.5 17.5L17 15 19.5 17.5 17 20z"/>
+      <path d="M9.5 12L12 9.5 14.5 12 12 14.5z" />
+      <path d="M6.5 6.5L9 4 11.5 6.5 9 9z" />
+      <path d="M14.5 6.5L17 4 19.5 6.5 17 9z" />
+      <path d="M6.5 17.5L9 15 11.5 17.5 9 20z" />
+      <path d="M14.5 17.5L17 15 19.5 17.5 17 20z" />
     </svg>
   )
 };

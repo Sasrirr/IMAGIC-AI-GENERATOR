@@ -76,17 +76,31 @@ const GenerateImage = ({
       });
   };
   const createPost = async () => {
+    console.log("🚀 POST IMAGE CLICKED - Starting createPost function");
+    console.log("📝 Post data being sent:", {
+      name: post.name,
+      prompt: post.prompt,
+      photoLength: post.photo ? post.photo.length : 0,
+      photoPreview: post.photo ? post.photo.substring(0, 50) + "..." : "No photo"
+    });
+
     setcreatePostLoading(true);
     setError("");
-    await CreatePost(post)
-      .then((res) => {
-        navigate("/");
-        setcreatePostLoading(false);
-      })
-      .catch((error) => {
-        setError(error?.response?.data?.message);
-        setcreatePostLoading(false);
-      });
+    
+    try {
+      console.log("📤 Making API call to CreatePost...");
+      const res = await CreatePost(post);
+      console.log("✅ CreatePost API response:", res);
+      console.log("🏠 Navigating to home page");
+      navigate("/");
+      setcreatePostLoading(false);
+    } catch (error) {
+      console.error("❌ CreatePost API error:", error);
+      console.error("📄 Error response:", error?.response?.data);
+      console.error("🔍 Error status:", error?.response?.status);
+      setError(error?.response?.data?.message);
+      setcreatePostLoading(false);
+    }
   };
 
   return (
